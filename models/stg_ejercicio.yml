@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: stg_ejercicio__empleados
+    description: tabla con empleados
+    columns:
+      - name: empleado_id
+        tests:
+          - not_null
+          - unique
+      - name: nombre
+        tests:
+          - not_null
+  - name: stg_ejercicio__plazas
+    description: las plazas de los empleados
+    columns:
+      - name: plaza_id
+        tests:
+          - not_null
+          - unique
+      - name: plaza
+        tests:
+          - not_null
+  - name: stg_ejercicio__salarios
+    description: los salarios correspondientes a cada plaza
+    columns:
+      - name: salario
+        tests:
+          - not_null

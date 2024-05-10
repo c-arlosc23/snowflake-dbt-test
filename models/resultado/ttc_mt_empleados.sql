@@ -20,7 +20,7 @@ final as (
         plazas.nominera,
         salarios.salario
     from empleados
-    join plazas on empleados.empleado_id = plazas.empleado_id
+    left join plazas on empleados.empleado_id = plazas.empleado_id
     join salarios on plazas.plaza_id = salarios.plaza_id
 )
 
