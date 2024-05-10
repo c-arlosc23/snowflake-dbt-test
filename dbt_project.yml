@@ -34,7 +34,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   prueba:
     # Applies to all files under models/example/
-    models:
-      +materialized: views
-    staging:
+    resultado:
       +materialized: table
+    staging:
+      +materialized: view

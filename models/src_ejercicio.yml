@@ -1,0 +1,34 @@
+version: 2
+
+sources:
+  - name: ejercicio
+    description: El ejercicio que me puso Edgar
+    database: dbt_test
+    schema: dbt_cgarciareyes
+    tables:
+      - name: empleados
+        description: tabla con empleados
+        columns:
+          - name: empleado_id
+            tests:
+              - not_null
+              - unique
+          - name: nombre
+            tests:
+              - not_null
+      - name: plazas
+        description: las plazas de los empleados
+        columns:
+          - name: plaza_id
+            tests:
+              - not_null
+              - unique
+          - name: plaza
+            tests:
+              - not_null
+      - name: salarios
+        description: los salarios correspondientes a cada plaza
+        columns:
+          - name: salario
+            tests:
+              - not_null
