@@ -33,8 +33,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   prueba:
-    # Applies to all files under models/example/
-    resultado:
+    ttc_mt_empleados:
       +materialized: table
     staging:
       +materialized: view
