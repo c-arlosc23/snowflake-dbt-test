@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: ejercicio
+    database: dbt_test
+    schema: dbt_cgarciareyes
+    tables:
+      - name: empleados
+      - name: plazas
+      - name: salarios
